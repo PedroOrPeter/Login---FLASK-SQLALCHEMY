@@ -12,6 +12,5 @@ class Usuario(database.Model, UserMixin):
     username = database.Column(database.String, nullable=False)
     password = database.Column(database.String, nullable=False)
     email = database.Column(database.String, nullable=False, unique=True)
-    posts = database.relationship('Post', backref='Author', lazy=True)
     knowlegde = database.Column(database.String, nullable=False, default='Empty')
 
